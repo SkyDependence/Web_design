@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>网站地图</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            background-image: url("./99435249_p0.png");
+            /* 背景图片路径 */
+            background-repeat: no-repeat;
+            /* 不重复 */
+            background-size: cover;
+            /* 覆盖整个视口 */
+            background-attachment: fixed;
+            /* 固定背景 */
+        }
+
+        h1 {
+            color: white;
+        }
+
+        .sitemap>ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sitemap a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+            transition: background .3s;
+        }
+
+        .sitemap a:hover {
+            background: #eee;
+        }
+
+        .links {
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            /* 居中 */
+            bottom: 0;
+            /* 底部 */
+            width: 99%;
+            /* 宽度99% */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>网站地图</h1>
+    <div class="sitemap">
+        <table>
+            <ul>
+                <tr>
+                    <li><a href="./main.html">首页</a></li>
+                    <li><a href="">关于我</a>
+                        <ul>
+                            <li><a href="">个人简介</a></li>
+                            <li><a href="">技术路线</a> </li>
+                            <li><a href="">友情支持/灵感来源</a></li>
+                        </ul>
+                    </li>
+                </tr>
+                <tr>
+                    <li><a href="">作品展示</a></li>
+                    <li><a href="">技能点评</a></li>
+                    <li><a href="">联系我</a></li>
+                </tr>
+            </ul>
+        </table>
+
+    </div>
+    <footer>
+        <p>Copyright &copy; 2023 Web 大作业 by nanyangzesi
+        </p>
+    </footer>
+</body>
+
+</html>

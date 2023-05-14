@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>登录页面</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            background-image: url("./89115849_p0.png");
+            /* 背景图片路径 */
+            background-repeat: no-repeat;
+            /* 不重复 */
+            background-size: cover;
+            /* 覆盖整个视口 */
+            background-attachment: fixed;
+            /* 固定背景 */
+        }
+
+        .login-page {
+            width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+
+        .form-item {
+            margin-bottom: 20px;
+            color: white;
+            opacity: 0.5;
+        }
+
+        label {
+            display: inline-block;
+            width: 80px;
+            text-align: right;
+        }
+
+        input {
+            padding: 10px;
+            outline: none;
+            border: 1px solid #ddd;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            border: 1px solid #28a745;
+            color: #fff;
+        }
+
+        a {
+            float: right;
+            color: #28a745;
+        }
+
+        footer {
+            text-align: center;
+            /* 居中 */
+            bottom: 0;
+            /* 底部 */
+            width: 99%;
+            /* 宽度99% */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-page">
+        <h1>用户登录</h1>
+        <form>
+            <div class="form-item">
+                <label for="username">用户名:</label>
+                <input type="text" name="username" id="username">
+            </div>
+            <div class="form-item">
+                <label for="password">密码:</label>
+                <input type="password" name="password" id="password">
+            </div>
+            <div>
+                <button type="submit">登录</button>
+                <a href="register.html">注册新用户</a>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <p>Copyright &copy; 2023 Web 大作业 by nanyangzesi
+        </p>
+    </footer>
+
+</body>
+
+</html>

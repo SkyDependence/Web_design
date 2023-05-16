@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ChatGPT-vercel 使用指南</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: "Helvetica", "Arial", sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+            background-image: url("./108093806_p0.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        h1,
+        h2 {
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 18px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 12px;
+            margin-top: 36px;
+        }
+
+        p {
+            line-height: 24px;
+            font-size: 18px;
+        }
+
+        a {
+            color: #66ccff;
+            text-decoration: none;
+        }
+
+        code {
+            background: rgba(0, 0, 0, 0.1);
+            padding: 2px 6px;
+            font-family: "Courier New", Courier, monospace;
+            border-radius: 3px;
+        }
+
+        #wrapper {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+
+        nav {
+            float: left;
+            width: 200px;
+            margin-right: 24px;
+            font-size: 18px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        footer {
+            clear: both;
+            border-top: 1px solid #ddd;
+            padding-top: 12px;
+            margin-top: 72px;
+            text-align: center;
+            color: #ccc;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <h1>ChatGPT-vercel 使用指南</h1>
+        <p>写在开头：该项目是我fork的一个项目，并非我参加的项目，本页面只是我未来想要达到的技术高度</p>
+        <h2><a href="https://github.com/SkyDpendence/chatgpt-vercel.git" target="_blank">项目地址</a></h2>
+        <nav>
+            <ul>
+                <li><a href="#settings">设置</a></li>
+                <li><a href="#token">token 是怎么算的</a></li>
+                <li><a href="#key">Open AI Key 要怎么获得</a></li>
+                <li><a href="#buttons">输入框右边的四个按钮</a></li>
+                <li><a href="#messages">消息</a></li>
+                <li><a href="#input">输入框</a></li>
+            </ul>
+        </nav>
+        <div style="margin-left:220px;">
+            <section id="settings">
+                <h2>设置</h2>
+                <p>系统角色指令:会在每次提问时添加。主要用于对 ChatGPT 的语气,口头禅等进行定制。</p>
+                <p>思维发散程度:越高 ChatGPT 思维就越发散,开始乱答。根据不同的问题可以调节这个选项,创意性的就可以调高一点。</p>
+                <p>开启连续对话:OpenAI 并没有提供 ChatGPT 那样的上下文功能,只能每次都把全部对话传过去,并且都要算 token,而且仍然有最大 4096 token 的限制。</p>
+                <p>OpenAI 模型:需要注意的是, 只有获得了 GPT4 API 内测资格的用户才可以使用您的 API KEY 调用 GPT4。不同的模型对应的
+                    token最大值不同,比如<code>gpt-3.5-turbo</code> 的最大 token 为 4k(4096),<code>gpt-4</code> 的最大 token
+                    为8k(8192),<code>gpt-4-32k</code> 的最大 token 为32k(32768)。不同模型的价格也不同,具体可以查看 <a
+                        href="https://openai.com/pricing/" target="_blank">OpenAI价格</a>。</p>
+            </section>
+
+            <section id="token">
+                <h2>token 是怎么算的</h2>
+                <p>OpenAI 有它自己的算法,大多数时候一个单词 1 token,一个汉字 2 token。</p>
+            </section>
+
+            <section id="key">
+                <h2>Open AI Key 要怎么获得</h2>
+                <p>注册 OpenAI 的帐号,然后 <a href="https://platform.openai.com/account/api-keys" target="_blank">生成
+                        Key</a>就行了。现在注册就送 5 美元,可以用一两个月。嫌注册麻烦,可以直接去买号,自行搜索。注意不要被骗,一般 5 元以下可以入手,看到有 120 美元的
+                    key,这种属于是绑了虚拟信用卡,可以透支 120美元,只能用一个月,而且容易封号。</p>
+            </section>
+
+            <section id="buttons">
+                <h2>输入框右边的四个按钮</h2>
+                <p>对话生成图片,电脑上是复制到剪贴板,手机上是直接下载。</p>
+                <p>对话生成 Markdown,复制到剪贴板。</p>
+                <p>清空对话。</p>
+            </section>
+
+            <section id="messages">
+                <h2>消息</h2>
+                <p>点击每条消息前的头像可以锁定对话,清空对话时不会清除。</p>
+                <p>对于提问,可以修改,重新回答,删除。修改是填入输入框。重新回答和删除会自动删除提问和回答。 </p>
+                <p>对于回答,可以复制,重新回答,删除。重新回答也会自动删除提问和回答。删除只会删除回答。</p>
+            </section>
+
+            <section id="input">
+                <h2>输入框</h2>
+                <p>点击顶部标题滚动到顶部,点击输入框滚动到底部。</p>
+                <p>发送 sk- 开头的 key,可以直接查询余额。</p>
+                <p>url 里使用 `url?q=你好啊` 这种方式可以打开网页直接回答 `你好啊`,当作搜索引擎使用。</p>
+            </section>
+        </div>
+
+        <footer>
+            <p><a href="main.html">主站点</a></p>
+            <p>Copyright &copy; 2023 Web 大作业 by nanyangzesi</p>
+        </footer>
+    </div>
+</body>
+
+</html>
